@@ -1,2 +1,1 @@
-# wagi-dotnet-hippo-yo-wasm
-Docker image containing wagi-dotnet templates hippo and yo-wasm
+# Demo - deploying, running and updating a WAGI Module in webapps using Bindle
