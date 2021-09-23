@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0-focal
 
 ARG USER_NAME=""
-ENV USER ${USER_NAME:-simon}
+ENV USER ${USER_NAME:-demouser}
 
 RUN mkdir /etc/sudoers.d && groupadd --gid 1000 ${USER} &&  useradd -s /bin/bash --uid 1000 --gid 1000 -m ${USER}  &&  echo ${USER}  ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USER}  && chmod 0440 /etc/sudoers.d/${USER} 
 
