@@ -27,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ghcr.io/${{ github.actor }}/wagi-dotnet
+          images: ghcr.io/${{ github.actor }}/wagi-dotnet-bindle
           tags: |
             type=sha
           flavor: |

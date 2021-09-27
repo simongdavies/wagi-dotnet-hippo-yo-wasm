@@ -25,10 +25,10 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get -y instal
 
 COPY --chown=1000:1000 ./Deislabs.WAGI.Templates.0.9.0-preview.nupkg .
 
-RUN dotnet new --install Deislabs.WAGI.Templates.0.9.0-preview.nupkg
-
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 USER 1000
 
 WORKDIR /
+
+ENTRYPOINT dotnet new --install /tmp/Deislabs.WAGI.Templates.0.9.0-preview.nupkg > /dev/null 2>&1 && /bin/bash
