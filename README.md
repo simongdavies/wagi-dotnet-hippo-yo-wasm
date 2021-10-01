@@ -22,9 +22,8 @@ export DEMO_RESOURCE_GROUP=<resource-group>
 export DEMO_LOCATION=<location> 
 echo export BINDLE_USERNAME=<username> >> ~/.bashrc
 echo export BINDLE_PASSWORD=<password> >> ~/.bashrc
-echo export DEMO_RESOURCE_GROUP=<resource-group> >> ~/.bashrc
 echo export DEMO_LOCATION=${DEMO_LOCATION} >> ~/.bashrc
-echo export DEMO_WEBPPNAME=<webappname> >> ~/.bashrc
+echo export DEMO_WEBAPPNAME=<webappname> >> ~/.bashrc
 echo export DEMO_RESOURCE_GROUP=${DEMO_RESOURCE_GROUP} >> ~/.bashrc
 
 ```
@@ -99,7 +98,7 @@ In the first terminal execute the following commands:
 ``` shell
 cd /tmp/dotnetapp
 dotnet new wagi-bindle --bindle-server-url ${BINDLE_URL} --bindle-name wagiapp/0.1.0
-az webapp up --logs --os-type linux --name ${DEMO_WEBPPNAME} --sku f1 -l ${DEMO_LOCATION} --resource-group ${DEMO_RESOURCE_GROUP} -b
+az webapp up --logs --os-type linux --name ${DEMO_WEBAPPNAME} --sku f1 -l ${DEMO_LOCATION} --resource-group ${DEMO_RESOURCE_GROUP} -b
 
 ```
 
